@@ -1,8 +1,12 @@
 import React from 'react'
 import HeaderLandingPage from '../components/Header/HeaderLandingPage'
+import BarraSearch from '../components/BarraSearch/BarraSearch'
 const LandingPage = () => {
   return (
-    <HeaderLandingPage/>
+    <div>
+        <HeaderLandingPage/>
+        <BarraSearch/>
+    </div>
   )
 }
 
