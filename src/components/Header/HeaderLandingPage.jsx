@@ -1,8 +1,8 @@
-import Logo from '/public/LogoNinja.svg'
+import Logo from '/public/LogoNinjaa.png'
 const HeaderLandingPage = () => {
   return (
     <div>
-      <img src={Logo} alt="" />
+      <img className={'logo'} src={Logo} alt="Logo To Do Ninja" />
     </div>
   )
 }
