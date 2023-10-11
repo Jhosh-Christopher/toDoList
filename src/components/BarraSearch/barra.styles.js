@@ -8,32 +8,33 @@ export const BarraStyles = styled.div`
     gap: 10px;
 
     .input-box{
-        width: 420px;
         display: flex;
+        align-items: center;
+        width: 420px;
         font-size: 20px;
         color: ${(props) => props.theme.brown};
-        border: solid 3px ${(props) => props.theme.orange};
+        border: solid 2px ${(props) => props.theme.orange};
         border-radius: 5px;
         height: 38px;
         padding: 8px 16px;
-        align-items: center;
+        box-shadow: 0 0 50px 15px ${(props) => props.theme.brown};
+
+        &::placeholder{
+            color: ${(props) => props.theme.gray};
+        }
     }
 
     .button{
         display: flex;
-        height: fit-content;
-        width: fit-content;
-        align-items: center;
         justify-content: center;
-        /* padding: 10px; */
+        align-items: center;
         color: ${(props) => props.theme.brown};
         background-color: ${(props) => props.theme.orange};
-    }
-
-    .BtnSvg{
-        width: 30px;
-        height: 30px;
-        flex-shrink: 0;
-        border-radius: 15px;
+        height: 38px;
+        width: 38px;
+        padding: 10px;
+        font-weight: bold;
+        border: solid 1px ${(props) => props.theme.gray};
+        border-radius: 5px;
     }
     `
