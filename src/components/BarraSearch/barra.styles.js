@@ -7,6 +7,11 @@ export const BarraStyles = styled.div`
     width: 100%;
     gap: 10px;
 
+    i{
+        background-color: ${(props) => props.theme.orange};
+        font-size: 30px;
+    }
+
     .input-box{
         display: flex;
         align-items: center;
