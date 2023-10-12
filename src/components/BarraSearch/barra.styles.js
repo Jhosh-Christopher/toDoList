@@ -41,5 +41,12 @@ export const BarraStyles = styled.div`
         font-weight: bold;
         border: solid 1px ${(props) => props.theme.gray};
         border-radius: 5px;
+
+        &:hover {
+        opacity: 0.8;
+        }
+        &:active {
+        opacity: 0.6;
+        }
     }
     `
