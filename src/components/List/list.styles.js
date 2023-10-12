@@ -9,7 +9,10 @@ export const ListStyles = styled.div`
     gap: 20px;
     margin-top: 30px;
 
+    
     ul{
+        width: 480px;
+        background-color: ${(props) => props.theme.brown};
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -17,15 +20,21 @@ export const ListStyles = styled.div`
         padding: 15px;
         width: 480px;
         min-height: 50px;
-        background: ${(props) => (props.theme.brown)};
         border-radius: 5px;
-        list-style: none;
+
     }
 
     p{
         color: ${(props) => props.theme.dark};
         font-size: 12px;
-        background-color: ${(props) => props.theme.brown};
+        background-color: transparent;
+        line-height: 24px;
+        text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
+        color: ${(props) => (props.checked ? "#e3a463" : "#1c2229")};
+        width: 80%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
     }
 
     section{
@@ -63,3 +72,16 @@ export const ListStyles = styled.div`
     }
     }
     `
+    export const Item = styled.li`
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 15px;
+        width: 480px;
+        min-height: 50px;
+        background: ${(props) => (props.checked ? "#e3a463" : "#debea0")};
+        border-radius: 5px;
+        list-style: none;
+    `
+
