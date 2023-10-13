@@ -22,10 +22,9 @@ export const BarraStyles = styled.div`
         border-radius: 5px;
         height: 38px;
         padding: 8px 16px;
-        box-shadow: 0 0 50px 15px ${(props) => props.theme.brown};
 
         &::placeholder{
-            color: ${(props) => props.theme.gray};
+            color: ${(props) => props.theme.brown};
         }
     }
 

@@ -11,8 +11,7 @@ export const ListStyles = styled.div`
 
     
     ul{
-        width: 480px;
-        background-color: ${(props) => props.theme.brown};
+        background-color: transparent;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,16 +20,24 @@ export const ListStyles = styled.div`
         width: 480px;
         min-height: 50px;
         border-radius: 5px;
-
+        gap:25px;
     }
 
+    input{
+        display: flex;
+        align-items: center;
+        width: 420px;
+        font-size: 20px;
+        color: ${(props) => props.theme.brown};
+        border: solid 2px ${(props) => props.theme.orange};
+        border-radius: 5px;
+        height: 38px;
+        padding: 8px 16px;
+    }
     p{
-        color: ${(props) => props.theme.dark};
-        font-size: 12px;
+        font-size: 14px;
         background-color: transparent;
         line-height: 24px;
-        text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
-        color: ${(props) => (props.checked ? "#e3a463" : "#1c2229")};
         width: 80%;
         overflow-wrap: break-word;
         word-wrap: break-word;
@@ -39,15 +46,15 @@ export const ListStyles = styled.div`
 
     section{
         padding: 3px 20px 3px 0;
-        width: 60px;
+        width: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: ${(props) => props.theme.brown};
+        background: transparent;
     }
 
     button{
-    width: 10%;
+    width: 20%;
     background-color: transparent;
     border-radius: 10px;
     border: none;
@@ -56,6 +63,7 @@ export const ListStyles = styled.div`
     font-size: 30px;
     line-height: 24px;
     color: ${(props) => props.theme.dark};
+    background: transparent;
 
     cursor: pointer;
 
@@ -68,7 +76,7 @@ export const ListStyles = styled.div`
 
     i{
         width: 25px;
-        background-color: ${(props) => props.theme.brown};
+        background: transparent;
     }
     }
     `
@@ -76,12 +84,17 @@ export const ListStyles = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding: 15px;
         width: 480px;
         min-height: 50px;
         background: ${(props) => (props.checked ? "#e3a463" : "#debea0")};
         border-radius: 5px;
         list-style: none;
+        box-shadow: 0 0 50px 15px ${(props) => props.theme.brown};
+        text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
     `
-
+    export const Spacer = styled.div`
+    width: 100%;
+    margin: ${(props) => props.margin || "20px"};
+    `
