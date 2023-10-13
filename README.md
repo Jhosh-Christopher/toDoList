@@ -1,6 +1,6 @@
 # ToDo Ninja
 
-<img src="./assets/LogoNinjaa.png">
+<img src='./src/assets/LogoNinjaa.png'>
 
 Este é um aplicativo de lista de tarefas simples criado com React, Vite, Styled-components e useState. Ele permite que você adicione, remova, marque/desmarque e edite tarefas da lista.
 
