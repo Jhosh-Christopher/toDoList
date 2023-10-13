@@ -1,23 +1,28 @@
-import React, { useState } from 'react'
-import HeaderLandingPage from '../components/Header/HeaderLandingPage'
-import BarraSearch from '../components/BarraSearch/BarraSearch'
-import List from '../components/List/List.jsx'
+import React, { useState } from "react";
+import HeaderLandingPage from "../components/Header/HeaderLandingPage";
+import BarraSearch from "../components/BarraSearch/BarraSearch";
+import List from "../components/List/List.jsx";
 
 const LandingPage = () => {
+  const [todoList, setTodoList] = useState([]);
 
-  const [todoList, setTodoList] = useState([])
-
-  function addList(todo){
-    setTodoList([...todoList, todo])
+  function addList(todo) {
+    if (!todo) return;
+    const newTask = {
+      id: Math.random(),
+      task: todo,
+      checked: false,
+    };
+    setTodoList([...todoList, newTask]);
   }
 
   return (
     <div>
-        <HeaderLandingPage/>
-        <BarraSearch addList={addList}/>
-        <List todoList={todoList}/>
+      <HeaderLandingPage />
+      <BarraSearch addList={addList} />
+      <List todoList={todoList} setTodoList={setTodoList} />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
