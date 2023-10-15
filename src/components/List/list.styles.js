@@ -9,7 +9,12 @@ export const ListStyles = styled.div`
     gap: 20px;
     margin-top: 30px;
 
-    
+    h3{
+        display: flex;
+        color: ${(props) => props.theme.brown};
+        align-self: center;
+        justify-content: center;
+    }
     ul{
         background-color: transparent;
         display: flex;
@@ -26,13 +31,27 @@ export const ListStyles = styled.div`
     input{
         display: flex;
         align-items: center;
-        width: 420px;
+        width: ${(props)=> props.width || '100%'};
         font-size: 20px;
-        color: ${(props) => props.theme.brown};
+        color: ${(props) => props.theme.orange};
         border: solid 2px ${(props) => props.theme.orange};
         border-radius: 5px;
         height: 38px;
         padding: 8px 16px;
+
+        &::placeholder{
+            color: ${(props) => props.theme.brown};
+        }
+    }
+    .search-container{
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    .search-checkbox{
+        width: 20px;
+        margin-left: 4px;
     }
     p{
         font-size: 14px;
