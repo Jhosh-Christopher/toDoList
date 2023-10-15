@@ -38,8 +38,13 @@ Siga estas etapas para iniciar o aplicativo em sua máquina:
 - Marcar/desmarcar uma tarefa como concluída clicando no ícone de marca de seleção.
 - Editar uma tarefa clicando no ícone de edição (ícone de lápis).
 - Remover uma tarefa clicando no ícone de lixeira.
-- Para editar uma tarefa, clique no ícone de edição, faça as alterações necessárias e clique no botão "Salvar" para 
+- Para editar uma tarefa, clique no ícone de edição, faça as alterações necessárias e clique no   botão "Salvar" para 
  confirmar as alterações. Você também pode clicar no botão "Cancelar" se não quiser salvar as alterações.
+
+5. Para pesquisar tarefas na lista, digite um termo na barra de pesquisa. A lista será automaticamente filtrada para exibir apenas as tarefas que correspondem ao termo de pesquisa.
+
+6. Você também pode optar por mostrar ou ocultar tarefas concluídas. Use o checkbox "Mostrar Tarefas Concluídas" para controlar a exibição das tarefas marcadas como concluídas.
+
 
 ## Tecnologias Utilizadas
 Este projeto foi construído com as seguintes tecnologias:
