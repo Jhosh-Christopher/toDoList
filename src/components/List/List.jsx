@@ -4,6 +4,9 @@ import { useState } from "react";
 const List = ({ todoList, setTodoList }) => {
   const [editedTask, setEditedTask] = useState(null);
   const [editedText, setEditedText] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showCompleted, setShowCompleted] = useState(true);
+
   const removeTask = (id) => {
     const updatedList = todoList.filter((task) => task.id !== id);
     setTodoList(updatedList);
@@ -35,11 +38,37 @@ const List = ({ todoList, setTodoList }) => {
     setEditedTask(null);
   };
 
+  const filteredList = todoList.filter((task) =>
+    task.task.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const completedList = showCompleted
+    ? filteredList
+    : filteredList.filter((task) => !task.checked);
+
   return (
     <ListStyles>
       <div>
+        <div>
+          <input
+            className={"input-box"}
+            type="text"
+            placeholder="Pesquisar Tarefa..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        <div className={"search-container"}>
+          <h3>Mostrar Tarefas Concluídas:</h3>
+          <input
+            className="search-checkbox"
+            type="checkbox"
+            checked={showCompleted}
+            onChange={() => setShowCompleted(!showCompleted)}
+          />
+        </div>
         <ul>
-          {todoList.map((task) => (
+          {completedList.map((task) => (
             <>
               <Item checked={task.checked} key={task.id}>
                 {editedTask === task.id ? (
